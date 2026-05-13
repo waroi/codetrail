@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const providerSchema = z.enum([
   "claude",
+  "claude-saka",
   "codex",
   "gemini",
   "cursor",

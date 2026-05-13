@@ -146,7 +146,8 @@ export function discoverSingleFile(
   const resolvedConfig = resolveDiscoveryConfig(config);
   if (
     /[\\/]subagents[\\/]/.test(filePath) &&
-    !resolvedConfig.providers.claude.options.includeSubagents
+    !resolvedConfig.providers.claude.options.includeSubagents &&
+    !resolvedConfig.providers["claude-saka"].options.includeSubagents
   ) {
     return null;
   }

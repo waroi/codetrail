@@ -37,9 +37,11 @@ import type {
   ParsedProviderMessage,
 } from "./providerParserShared";
 
+
 export function parseProviderPayload(args: ParseProviderPayloadArgs): ParsedProviderMessage[] {
   switch (args.provider) {
     case "claude":
+    case "claude-saka":
       return parseClaudePayload(args);
     case "codex":
       return parseCodexPayload(args);
@@ -59,6 +61,7 @@ export function parseProviderPayload(args: ParseProviderPayloadArgs): ParsedProv
 export function parseProviderEvent(args: ParseProviderEventArgs): ParseProviderEventResult {
   switch (args.provider) {
     case "claude":
+    case "claude-saka":
       return parseClaudeEvent(args);
     case "codex":
       return parseCodexEvent(args);

@@ -673,6 +673,7 @@ describe("App shell", () => {
           enabled: true,
           providerCounts: {
             claude: 1,
+            "claude-saka": 0,
             codex: 0,
             gemini: 0,
             cursor: 0,
@@ -749,6 +750,7 @@ describe("App shell", () => {
           instrumentationEnabled: false,
           providerCounts: {
             claude: 1,
+            "claude-saka": 0,
             codex: 0,
             gemini: 0,
             cursor: 0,
@@ -815,6 +817,7 @@ describe("App shell", () => {
           enabled: true,
           providerCounts: {
             claude: 1,
+            "claude-saka": 0,
             codex: 0,
             gemini: 0,
             cursor: 0,
@@ -1543,6 +1546,7 @@ describe("App shell", () => {
           enabled: true,
           providerCounts: {
             claude: 1,
+            "claude-saka": 0,
             codex: 0,
             gemini: 0,
             cursor: 0,
@@ -3685,6 +3689,7 @@ describe("App shell", () => {
             revision: 1,
             providerCounts: {
               claude: 0,
+              "claude-saka": 0,
               codex: 0,
               gemini: 0,
               cursor: 0,
@@ -3701,6 +3706,7 @@ describe("App shell", () => {
           revision: 2,
           providerCounts: {
             claude: 1,
+            "claude-saka": 0,
             codex: 0,
             gemini: 0,
             cursor: 0,
@@ -3804,6 +3810,7 @@ describe("App shell", () => {
             revision: 1,
             providerCounts: {
               claude: 0,
+              "claude-saka": 0,
               codex: 0,
               gemini: 0,
               cursor: 0,
@@ -3820,6 +3827,7 @@ describe("App shell", () => {
           revision: 2,
           providerCounts: {
             claude: 0,
+            "claude-saka": 0,
             codex: 1,
             gemini: 0,
             cursor: 0,

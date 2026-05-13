@@ -135,6 +135,7 @@ function createProjectPaneProps(
     providers: ["claude", "codex", "gemini", "cursor"],
     projectProviderCounts: {
       claude: 1,
+      "claude-saka": 0,
       codex: 1,
       gemini: 1,
       cursor: 0,
@@ -326,15 +327,16 @@ describe("ProjectPane", () => {
       data: {
         projectProviders: ["copilot"],
         providers: ["copilot", "copilot_cli"],
-        projectProviderCounts: {
-          claude: 0,
-          codex: 0,
-          gemini: 0,
-          cursor: 0,
-          copilot: 2,
-          copilot_cli: 1,
-          opencode: 0,
-        },
+          projectProviderCounts: {
+              claude: 0,
+              "claude-saka": 0,
+              codex: 0,
+              gemini: 0,
+              cursor: 0,
+              copilot: 2,
+              copilot_cli: 1,
+              opencode: 0,
+            },
       },
       actions: {
         onToggleProvider,
@@ -1336,6 +1338,7 @@ describe("ProjectPane", () => {
             updateSource: "auto",
             projectProviderCounts: {
               claude: 1,
+              "claude-saka": 0,
               codex: 1,
               gemini: 0,
               cursor: 0,

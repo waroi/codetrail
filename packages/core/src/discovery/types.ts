@@ -63,6 +63,7 @@ export type DiscoveryConfig = {
   geminiHistoryRoot?: string;
   geminiProjectsPath?: string;
   cursorRoot: string;
+  claudeSakaRoot?: string;
   copilotRoot: string;
   copilotCliRoot: string;
   opencodeRoot: string;

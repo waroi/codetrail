@@ -100,6 +100,7 @@ describe("AppStateStore", () => {
       sessionScrollTop: 672,
       systemMessageRegexRules: {
         claude: ["^<command-name>"],
+        "claude-saka": [],
         codex: ["^<environment_context>"],
         gemini: [],
         cursor: [],
@@ -158,6 +159,7 @@ describe("AppStateStore", () => {
       sessionScrollTop: 672,
       systemMessageRegexRules: {
         claude: ["^<command-name>"],
+        "claude-saka": [],
         codex: ["^<environment_context>"],
         gemini: [],
         cursor: [],
