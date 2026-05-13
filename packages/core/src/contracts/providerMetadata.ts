@@ -22,7 +22,8 @@ export type ProviderDiscoveryPathKey =
   | "cursorRoot"
   | "copilotRoot"
   | "copilotCliRoot"
-  | "opencodeRoot";
+  | "opencodeRoot"
+  | "claudeSakaRoot";
 
 export type ProviderDiscoveryPathDefinition = {
   key: ProviderDiscoveryPathKey;
@@ -103,6 +104,25 @@ export const PROVIDER_METADATA: Record<Provider, ProviderMetadata> = {
     ],
     supportsTurnFamilyQuery: true,
     turnDiffStrategy: "inline_reconstructed",
+  },
+  "claude-saka": {
+    id: "claude-saka",
+    label: "Claude Saka",
+    sourceFormat: "jsonl_stream",
+    discoveryPaths: [
+      {
+        key: "claudeSakaRoot",
+        label: "Claude Saka root",
+        watch: true,
+        defaultPath: (platform, environment) =>
+          joinPlatformPath(platform, environment.homeDir, ".claude-corp", "claude-config", "projects"),
+      },
+    ],
+    defaultSystemMessageRegexRules: [
+      "^<command-name>",
+      "^<local-command-stdout>",
+      "^<local-command-caveat>",
+    ],
   },
   codex: {
     id: "codex",

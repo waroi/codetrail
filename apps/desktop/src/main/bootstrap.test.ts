@@ -498,6 +498,7 @@ describe("bootstrapMainProcess", () => {
     sessionScrollTop: 180,
     systemMessageRegexRules: {
       claude: ["^<command-name>"],
+      "claude-saka": [],
       codex: ["^<environment_context>"],
       gemini: [],
       cursor: [],

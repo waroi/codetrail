@@ -1,6 +1,7 @@
 import { PROVIDER_VALUES, type Provider } from "../contracts/canonical";
 
 import { claudeAdapter } from "./claude/adapter";
+import { claudeSakaAdapter } from "./adapters/claudeSaka";
 import { codexAdapter } from "./codex/adapter";
 import { copilotAdapter } from "./copilot/adapter";
 import { copilotCliAdapter } from "./copilotCli/adapter";
@@ -11,6 +12,7 @@ import type { ProviderAdapter } from "./types";
 
 export const PROVIDER_ADAPTERS: Record<Provider, ProviderAdapter> = {
   claude: claudeAdapter,
+  "claude-saka": claudeSakaAdapter,
   codex: codexAdapter,
   gemini: geminiAdapter,
   cursor: cursorAdapter,

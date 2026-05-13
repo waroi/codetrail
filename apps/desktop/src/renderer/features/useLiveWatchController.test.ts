@@ -19,6 +19,7 @@ function makeLiveStatusResponse(
     updatedAt: new Date().toISOString(),
     providerCounts: {
       claude: 0,
+      "claude-saka": 0,
       codex: 0,
       gemini: 0,
       cursor: 0,

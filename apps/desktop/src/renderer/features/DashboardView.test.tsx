@@ -34,6 +34,7 @@ const statsFixture: DashboardStatsResponse = {
   },
   providerCounts: {
     claude: 44,
+    "claude-saka": 0,
     codex: 62,
     gemini: 22,
     cursor: 0,
