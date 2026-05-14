@@ -419,7 +419,15 @@ describe("AppStateStore", () => {
     const fs = createMemoryFs({
       [filePath]: JSON.stringify({
         indexing: {
-          enabledProviders: ["claude", "codex", "gemini", "cursor", "copilot", "copilot_cli", "opencode"],
+          enabledProviders: [
+            "claude",
+            "codex",
+            "gemini",
+            "cursor",
+            "copilot",
+            "copilot_cli",
+            "opencode",
+          ],
         },
       }),
     });
