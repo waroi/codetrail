@@ -414,6 +414,32 @@ describe("AppStateStore", () => {
     });
   });
 
+  it("heals the pre-claude-saka default provider selection to include claude-saka", () => {
+    const filePath = "/tmp/codetrail-legacy-indexing-state-pre-claude-saka.json";
+    const fs = createMemoryFs({
+      [filePath]: JSON.stringify({
+        indexing: {
+          enabledProviders: ["claude", "codex", "gemini", "cursor", "copilot", "copilot_cli", "opencode"],
+        },
+      }),
+    });
+
+    const store = new AppStateStore(filePath, { fs });
+
+    expect(store.getIndexingState()).toEqual({
+      enabledProviders: [
+        "claude",
+        "codex",
+        "gemini",
+        "cursor",
+        "copilot",
+        "copilot_cli",
+        "opencode",
+        "claude-saka",
+      ],
+    });
+  });
+
   it("preserves intentional custom provider subsets", () => {
     const filePath = "/tmp/codetrail-custom-indexing-state.json";
     const fs = createMemoryFs({

@@ -131,6 +131,15 @@ const LEGACY_PRE_OPENCODE_ENABLED_PROVIDERS: Provider[] = [
   "copilot",
   "copilot_cli",
 ];
+const LEGACY_PRE_CLAUDE_SAKA_ENABLED_PROVIDERS: Provider[] = [
+  "claude",
+  "codex",
+  "gemini",
+  "cursor",
+  "copilot",
+  "copilot_cli",
+  "opencode",
+];
 const DEFAULT_FILE_SYSTEM: AppStateStoreFileSystem = {
   existsSync: (path) => existsSync(path),
   mkdirSync: (path, options) => mkdirSync(path, options),
@@ -548,7 +557,8 @@ function healLegacyEnabledProviders(providers: Provider[] | null): Provider[] | 
 function matchesLegacyDefaultProviderSelection(providers: readonly Provider[]): boolean {
   return (
     matchesProviderSelection(providers, LEGACY_DEFAULT_ENABLED_PROVIDERS) ||
-    matchesProviderSelection(providers, LEGACY_PRE_OPENCODE_ENABLED_PROVIDERS)
+    matchesProviderSelection(providers, LEGACY_PRE_OPENCODE_ENABLED_PROVIDERS) ||
+    matchesProviderSelection(providers, LEGACY_PRE_CLAUDE_SAKA_ENABLED_PROVIDERS)
   );
 }
 
